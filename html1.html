@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.0.0.min.js"></script>
+    <style>
+        .max-nav {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+
+        .max-nav a {
+            float: left;
+            width: 20%;
+        }
+
+        .max-nav a div {
+            padding: 0.2rem;
+        }
+
+        .max-nav a img {
+            width: 100%;
+            border-radius: 100%;
+        }
+        .max-nav a .p1 {
+            width: 100%;
+            height: 45px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+<div class="max-nav">
+    <a href="#" class="a-nav">
+        <div><img src="bg.jpg" alt=""></div>
+        <p class="p1">蛙鸣蝉蝇蝇城墙在健健康康就看见</p></a>
+    <a href="#" class="a-nav">
+        <div><img src="bg.jpg" alt=""></div>
+        <p class="p1">蛙鸣蝉今是星期几对是星期四</p></a>
+    <a href="#" class="a-nav">
+        <div><img src="bg.jpg" alt=""></div>
+        <p class="p1">蛙鸣蝉 </p>
+    </a>
+    <a href="#" class="a-nav">
+        <div><img src="bg.jpg" alt=""></div>
+        <p class="p1">蛙鸣蝉大模大样大模大样 </p>
+    </a>
+    <a href="#" class="a-nav">
+        <div><img src="bg.jpg" alt=""></div>
+        <p class="p1">蛙鸣蝉大模大样大模大样 </p>
+    </a>
+
+</div>
+</body>
+<script>
+	$('.p1').each(function (index,ele) {
+		// console.log(index);
+		// console.log(ele);
+
+		var num = $(ele).html();
+		console.log(num);
+	    if (num.length <= 5) {
+	        $(ele).html(num.substr(0,5))
+	    }
+	    else if (num.length>6 ) {
+	        $(ele).html(num.substr(0,5)+'<br>'+num.substr(6,7))
+	    }
+	})
+    
+
+</script>
+</html>
